@@ -1,0 +1,30 @@
+local lastroom = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+local customlast = game.Workspace.CurrentRooms[lastroom].custom
+local paint1 = customlast.Assets.Painting_Big1.PaintPrompt
+local paint2 = customlast.Assets.Painting_Big2.PaintPrompt
+local wd1 = customlast.Assets.Wardrobe1.HidePrompt
+local wd2 = customlast.Assets.Wardrobe2.HidePrompt
+--
+local function onTriggered()
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The door is stuck.")
+end
+--
+local function onTriggered2()
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "I can't hide here.")
+end
+--
+local function onTriggered3()
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''??''")
+end
+--
+local function onTriggered4()
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''oh no i was oops!''")
+    wait(1.69420)
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "He's just friends with Oof, the owner of the script.")
+end
+-- triggers
+paint1.Triggered:Connect(onTriggered3)
+paint2.Triggered:Connect(onTriggered4)
+wd1.Triggered:Connect(onTriggered2)
+wd2.Triggered:Connect(onTriggered)
+--
