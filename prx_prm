@@ -38,11 +38,8 @@ local function onTriggered3()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Ok i'm done.")
 	paint1_1.Canvas.SurfaceGui.ImageLabel:Destroy()
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
-		local fakedoormodel = game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel
-		local currentdoorposition = fakedoormodel.PrimaryPart.Position
-		local newdoorposition = currentdoorposition + Vector3.new(0, -10, 0)
-		fakedoormodel:SetPrimaryPartCFrame(CFrame.new(newdoorposition))
 	loadstring(game:HttpGet("https://github.com/PABMAXICHAC/doors-monsters-models/raw/main/teleportpart"))()
+	customlast:Destroy()
 	end
 	if clicknumber >= 76 then
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "There is no painting.")
