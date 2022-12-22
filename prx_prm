@@ -11,6 +11,7 @@ local paint4 = customlast.Assets.Painting_Tall.InteractPrompt
 local wd1 = customlast.Assets.Wardrobe1.HidePrompt
 local wd2 = customlast.Assets.Wardrobe2.HidePrompt
 local crates = customlast.Assets.Crates.WoodenCrate4.CratesPrompt
+local crux = customlast.Assets.Crucifix.CrucifixPrompt
 local clicknumber = 0
 --
 local function onTriggered()
@@ -69,6 +70,10 @@ local function onTriggeredCrates()
 firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Just a bunch of crates. I wonder if there is something inside one of them.")
 end
 --
+local function onTriggeredCrucifix()
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The Crucifix emits a strange aura.")
+end
+--
 
 -- triggers
 paint1.Triggered:Connect(onTriggered3)
@@ -78,6 +83,8 @@ paint4.Triggered:Connect(onTriggeredLisa)
 crates.Triggered:Connect(onTriggeredCrates)
 wd1.Triggered:Connect(onTriggered2)
 wd2.Triggered:Connect(onTriggered)
+crux.Triggered:Connect(onTriggeredCrucifix)
+
 --
 end
 --
