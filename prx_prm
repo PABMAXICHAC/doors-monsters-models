@@ -41,9 +41,10 @@ local function onTriggered3()
 	paint1_1.Canvas.SurfaceGui.ImageLabel:Destroy()
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
 	end
-	if clicknumber >= 76 then
+if clicknumber >= 76 then
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "There is no painting.")
-	end
+end
+
 end
 --
 local function onTriggered4()
@@ -56,6 +57,7 @@ local function onTriggeredLisa()
 firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''Mohner Liser''. Drawn by ThatOneAmethystIceCube.")
 wait(2.5)
 firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This is true art.")
+end
 --
 local function onTriggered5()
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''The Screechset''. Drawn by Zenyx.")
@@ -78,3 +80,5 @@ wd1.Triggered:Connect(onTriggered2)
 wd2.Triggered:Connect(onTriggered)
 --
 end
+--
+
