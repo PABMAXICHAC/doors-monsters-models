@@ -7,8 +7,10 @@ local paint1 = customlast.Assets.Painting_Big1.PaintPrompt
 local paint1_1 = customlast.Assets.Painting_Big1
 local paint2 = customlast.Assets.Painting_Big2.PaintPrompt
 local paint3 = customlast.Assets.Painting_Big3.PaintPrompt
+local paint4 = customlast.Assets.Painting_Tall.InteractPrompt
 local wd1 = customlast.Assets.Wardrobe1.HidePrompt
 local wd2 = customlast.Assets.Wardrobe2.HidePrompt
+local crates = customlast.Assets.Crates.CratesPrompt
 local clicknumber = 0
 --
 local function onTriggered()
@@ -50,16 +52,27 @@ local function onTriggered4()
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "He's friends with Oof.")
 end
 --
+local function onTriggeredLisa()
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''Mohner Liser''. Drawn by ThatOneAmethystIceCube.")
+wait(2.5)
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This is true art.")
+--
 local function onTriggered5()
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''The Screechset''. Drawn by Zenyx.")
     wait(2.5)
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The true meaning of screech.")
 end
 --
+local function onTriggeredCrates()
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Just a bunch of crates. I wonder if there is something inside one of them.")
+--
+
 -- triggers
 paint1.Triggered:Connect(onTriggered3)
 paint2.Triggered:Connect(onTriggered4)
 paint3.Triggered:Connect(onTriggered5)
+paint4.Triggered:Connect(onTriggeredLisa)
+crates.Triggered:Connect(onTriggeredCrates)
 wd1.Triggered:Connect(onTriggered2)
 wd2.Triggered:Connect(onTriggered)
 --
