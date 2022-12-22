@@ -1,4 +1,7 @@
 local lastroom = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+local cl_exist = game.Workspace.CurrentRooms[lastroom]:FindFirstChild("custom")
+if cl_exist then
+
 local customlast = game.Workspace.CurrentRooms[lastroom].custom
 local paint1 = customlast.Assets.Painting_Big1.PaintPrompt
 local paint2 = customlast.Assets.Painting_Big2.PaintPrompt
@@ -22,9 +25,18 @@ local function onTriggered4()
     wait(1.69420)
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "He's just friends with Oof, the owner of the script.")
 end
+--
+local function onTriggered5()
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''The Screechset''. Drawn by Zenyx.")
+    wait(2.5)
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The true meaning of screech.")
+end
+--
 -- triggers
 paint1.Triggered:Connect(onTriggered3)
 paint2.Triggered:Connect(onTriggered4)
+paint3.Triggered:Connect(onTriggered5)
 wd1.Triggered:Connect(onTriggered2)
 wd2.Triggered:Connect(onTriggered)
 --
+end
