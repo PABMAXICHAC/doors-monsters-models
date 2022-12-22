@@ -28,7 +28,7 @@ local function onTriggered4()
 end
 --
 local function onTriggered5()
-	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''The Screechset''. Drawn by Zenyx.")
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''The Screechset''. Drawn by Zenyx.")
     wait(2.5)
     firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The true meaning of screech.")
 end
