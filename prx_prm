@@ -21,7 +21,7 @@ end
 --
 local function onTriggered3()
 	clicknumber = clicknumber + 1
-	if clicknumber ~= 25 and clicknumber ~= 50 and clicknumber ~= 75 then
+	if clicknumber ~= 25 and clicknumber ~= 50 and clicknumber ~= 75 and clicknumber <= 75 then
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''??''")
 	end
 	if clicknumber == 25 then
@@ -38,7 +38,14 @@ local function onTriggered3()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Ok i'm done.")
 	paint1_1.Canvas.SurfaceGui.ImageLabel:Destroy()
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
-	clicknumber = 0
+	local fakedoormodel = game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel
+	fakedoormodel.Transparency = 0
+	fakedoormodel.CanCollide = true
+	local teleportpart = customlast.TeleportPart.Position
+	game.Players.LocalPlayer.Character:MoveTo(teleportpart)
+	end
+	if clicknumber >= 76 then
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "There is no painting.")
 	end
 end
 --
