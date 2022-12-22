@@ -1,0 +1,4 @@
+local lastroom = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+local customlast = game.Workspace.CurrentRooms[lastroom].custom
+local teleportpart = customlast.TeleportPart.Position
+game.Players.LocalPlayer.Character:MoveTo(teleportpart)
