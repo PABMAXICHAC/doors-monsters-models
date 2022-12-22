@@ -4,10 +4,12 @@ if cl_exist then
 
 local customlast = game.Workspace.CurrentRooms[lastroom].custom
 local paint1 = customlast.Assets.Painting_Big1.PaintPrompt
+local paint1_1 = customlast.Assets.Painting_Big1
 local paint2 = customlast.Assets.Painting_Big2.PaintPrompt
 local paint3 = customlast.Assets.Painting_Big3.PaintPrompt
 local wd1 = customlast.Assets.Wardrobe1.HidePrompt
 local wd2 = customlast.Assets.Wardrobe2.HidePrompt
+local clicknumber = 0
 --
 local function onTriggered()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The door is stuck.")
@@ -19,6 +21,21 @@ end
 --
 local function onTriggered3()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''??''")
+	clicknumber = clicknumber + 1
+	if randomnumber == 25 then
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Stop spam clicking me.")
+	end
+	if clicknumber == 50 then
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Okay, this is what you get.")
+	game.Players.LocalPlayer.Character.Humanoid.Health = game.Players.LocalPlayer.Character.Humanoid.Health - 25
+	wait(2)
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Not that funny now, huh?")
+	end
+	if clicknumber == 75 then
+	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Ok i'm done.")
+	paint1_1.Canvas.SurfaceGui.ImageLabel.Image.Value = "rbxasset://5123657861789146312678723149"
+	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
+	end
 end
 --
 local function onTriggered4()
