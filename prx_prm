@@ -24,7 +24,7 @@ local function onTriggered3()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''??''")
 	end
 	clicknumber = clicknumber + 1
-	if randomnumber == 25 then
+	if clicknumber == 25 then
 	wait(0.1)
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Stop spam clicking me.")
 	end
