@@ -39,14 +39,7 @@ local function onTriggered3()
 	paint1_1.Canvas.SurfaceGui.ImageLabel:Destroy()
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
 	local fakedoormodel = game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel
-fakedoormodel.FakeDoor.Transparency = 1
-fakedoormodel.FakeDoor.CanCollide = false
-fakedoormodel.Knob.Transparency = 1
-fakedoormodel.Knob.CanCollide = false
-fakedoormodel.Collision.Transparency = 1
-fakedoormodel.Collision.CanCollide = false
-fakedoormodel.Plate.Transparency = 1
-fakedoormodel.Plate.CanCollide = false
+	fakedoormodel:MoveTo(Vector3.new(0, -10, 0))
 	local teleportpart = customlast.TeleportPart.Position
 	game.Players.LocalPlayer.Character:MoveTo(teleportpart)
 	end
