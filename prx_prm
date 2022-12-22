@@ -24,7 +24,7 @@ end
 local function onTriggered4()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''oh no i was oops!''")
     wait(1.69420)
-    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "He's just friends with Oof, the owner of the script.")
+    firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "He's friends with Oof.")
 end
 --
 local function onTriggered5()
