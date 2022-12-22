@@ -39,7 +39,7 @@ local function onTriggered3()
 	paint1_1.Canvas.SurfaceGui.ImageLabel:Destroy()
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
 	local fakedoormodel = game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel
-	fakedoormodel:MoveTo(Vector3.new(0, -10, 0))
+	fakedoormodel:SetPrimaryPartCFrame(CFrame.new(0, -10, 0)
 	local teleportpart = customlast.TeleportPart.Position
 	game.Players.LocalPlayer.Character:MoveTo(teleportpart)
 	end
