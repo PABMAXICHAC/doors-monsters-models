@@ -5,6 +5,7 @@ if cl_exist then
 local customlast = game.Workspace.CurrentRooms[lastroom].custom
 local paint1 = customlast.Assets.Painting_Big1.PaintPrompt
 local paint2 = customlast.Assets.Painting_Big2.PaintPrompt
+local paint3 = customlast.Assets.Painting_Big3.PaintPrompt
 local wd1 = customlast.Assets.Wardrobe1.HidePrompt
 local wd2 = customlast.Assets.Wardrobe2.HidePrompt
 --
