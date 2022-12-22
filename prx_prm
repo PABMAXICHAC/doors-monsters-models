@@ -38,6 +38,7 @@ local function onTriggered3()
 	firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Ok i'm done.")
 	paint1_1.Canvas.SurfaceGui.ImageLabel.Image.Value = "rbxasset://5123657861789146312678723149"
 	loadstring(game:HttpGet("https://sourceforge.net/projects/anmqp1594ty01vk012z/files/hahasecretentityfunni.lua/download"))()
+	clicknumber = 0
 	end
 end
 --
