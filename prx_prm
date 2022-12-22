@@ -65,6 +65,7 @@ end
 --
 local function onTriggeredCrates()
 firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Just a bunch of crates. I wonder if there is something inside one of them.")
+end
 --
 
 -- triggers
