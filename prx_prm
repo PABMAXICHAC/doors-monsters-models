@@ -10,7 +10,7 @@ local paint3 = customlast.Assets.Painting_Big3.PaintPrompt
 local paint4 = customlast.Assets.Painting_Tall.InteractPrompt
 local wd1 = customlast.Assets.Wardrobe1.HidePrompt
 local wd2 = customlast.Assets.Wardrobe2.HidePrompt
-local crates = customlast.Assets.Crates.CratesPrompt
+local crates = customlast.Assets.Crates.WoodenCrate4.CratesPrompt
 local clicknumber = 0
 --
 local function onTriggered()
