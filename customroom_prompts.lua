@@ -76,7 +76,7 @@ firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "The Crucifix em
 end
 --
 local function onTriggeredSmall()
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''oh no''.")
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "This painting is titled ''oh no''. Drawn by valencanceladevi")
 wait(2.5)
 firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Someone should tell him to turn around.")
 end
