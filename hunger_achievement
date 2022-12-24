@@ -5,5 +5,5 @@ Achievements.Get({
     Title = "Pro Gamer",
     Desc = "He came for your life.",
     Reason = "Survive ''Hunger''.",
-    Image = "https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/MOSHED-2022-11-27-1-33-26.jpg?raw=true",
+    Image = "https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/hunger.png?raw=true",
 })
