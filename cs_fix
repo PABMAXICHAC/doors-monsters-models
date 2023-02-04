@@ -1,0 +1,54 @@
+coroutine.wrap(function()
+loadstring(game:HttpGet("https://github.com/PABMAXICHAC/doors-monsters-models/raw/main/commonsense"))()
+end)()
+--
+coroutine.wrap(function()
+  game.Workspace:WaitForChild("Common Sense")
+-- Function to create the part and start the timer
+local function createPart()
+  -- Get the position of the model "Common Sense"
+  local modelPos = game:GetService("Workspace")["Common Sense"].WorldPivot.Position
+  local rx = math.random(1,8)
+  local ry = math.random(0,0)
+  local rz = math.random(1,8)
+  -- Create a part and add it to the workspace
+  local part = Instance.new("Part")
+  part.Parent = game.Workspace
+  part.Size = Vector3.new(1, 1, 1)
+  part.Anchored = true
+  part.Name = "Fire"
+  part.Transparency = 1
+  part.CanCollide = false
+  part.Position = modelPos
+  part.Position = part.Position + Vector3.new(rx, ry, rz)  -- Move the part a bit above the model
+    game:GetService("Debris"):AddItem(part, 5)
+  -- Create a fire particle effect and attach it to the part
+  local fire = Instance.new("Fire")
+  fire.Parent = part
+  fire.Size = 5
+local function dmg()
+      game.Players.LocalPlayer.Character.Humanoid.Health = game.Players.LocalPlayer.Character.Humanoid.Health - 1
+      local Players = game:GetService("Players")
+      local Plr = Players.LocalPlayer
+      local ReSt = game:GetService("ReplicatedStorage")
+      ReSt.GameStats["Player_".. Plr.Name].Total.DeathCause.Value = "Fire"
+end
+--
+  -- Deal damage to any players that touch the part
+  part.Touched:Connect(function()
+dmg()
+  end)
+--
+  part.TouchEnded:Connect(function()
+dmg()
+end)
+--
+end
+
+-- Call the function to create the part
+local cs_exist = game.Workspace:FindFirstChild("Common Sense")
+repeat
+wait(0.05)
+createPart()
+until cs_exist == nil
+end)()
